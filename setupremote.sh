@@ -1,6 +1,7 @@
 sudo apt-get install openssh-server -y
 sudo systemctl enable ssh --now
 sudo systemctl start ssh
+sudo systemctl status ssh
 
 check if install
 sudo apt install xrdp -y
