@@ -1,3 +1,5 @@
+sudo apt-get install openssh-server -y
+
 check if install
 sudo apt install xrdp -y
 sudo usermod -a -G ssl-cert xrdp
