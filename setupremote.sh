@@ -9,7 +9,7 @@ echo "5. TeamViewer (Port 5938)"
 echo "6. No Machine (Port 4000)"
 echo "7. Ngrok"
 echo "8. Fix apt update error/dpkg lock"
-echo "9. "
+echo "9. Unistal"
 echo "0. Quit"
 read -p "choose [1-6]:" Answer  
 case $Answer in  
