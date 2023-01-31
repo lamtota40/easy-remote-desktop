@@ -1,3 +1,24 @@
+#!/bin/bash  
+  
+echo "Choose menu answer with number!"  
+echo "1. SSH server(Port 22)"
+echo "2. XRDP server (Port )"
+echo "3. Chrome Remote Desktop (Port )"
+echo "4. TeamViewer (Port )"
+echo "5. No Machine (Port )"
+echo "6. Ngrok"
+read -p "choose [1-6]:" Answer  
+case $Answer in  
+    Yes|yes|y|Y)  
+        echo "That's amazing."  
+        echo  
+        ;;  
+    No|no|N|n)  
+        echo "It's easy. Let's start learning from javatpoint."  
+        ;;  
+esac
+
+
 sudo apt-get install openssh-server -y
 sudo systemctl enable ssh --now
 sudo systemctl start ssh
