@@ -2,11 +2,15 @@
   
 echo "Choose menu answer with number!"  
 echo "1. SSH server(Port 22)"
-echo "2. XRDP server (Port )"
-echo "3. Chrome Remote Desktop (Port )"
-echo "4. TeamViewer (Port )"
-echo "5. No Machine (Port )"
-echo "6. Ngrok"
+echo "2. VNC server (Port 5901)"
+echo "3. XRDP server (Port 3389)"
+echo "4. Chrome Remote Desktop (Port 3478)"
+echo "5. TeamViewer (Port 5938)"
+echo "6. No Machine (Port 4000)"
+echo "7. Ngrok"
+echo "8. Fix apt update error/dpkg lock"
+echo "9. "
+echo "0. Quit"
 read -p "choose [1-6]:" Answer  
 case $Answer in  
     Yes|yes|y|Y)  
