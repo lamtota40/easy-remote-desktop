@@ -9,9 +9,10 @@ echo "5. TeamViewer (Port 5938)"
 echo "6. No Machine (Port 4000)"
 echo "7. Ngrok v3 stable"
 echo "8. Fix apt update error/dpkg lock"
-echo "9. Unistal"
+echo "9. Firewall setup"
+echo "10. Unistal"
 echo "0. Quit"
-read "choose [0-9]:" num  
+read "choose [0-10]:" num  
 case $num in  
     "1")  
         echo "That's amazing."
