@@ -13,11 +13,10 @@ echo "9. Unistal"
 echo "0. Quit"
 read "choose [0-9]:" num  
 case $num in  
-    Yes|yes|y|Y)  
-        echo "That's amazing."  
-        echo  
+    "1")  
+        echo "That's amazing."
         ;;  
-    No|no|N|n)  
+    "2")  
         echo "It's easy. Let's start learning from javatpoint."  
         ;;  
 esac
@@ -28,11 +27,9 @@ sudo systemctl enable ssh --now
 sudo systemctl start ssh
 sudo systemctl status ssh
 
-check if install
 sudo apt install xrdp -y
 sudo usermod -a -G ssl-cert xrdp
 
-check if install
 sudo wget dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb -P /tmp
 sudo apt install /tmp/chrome-remote-desktop_current_amd64.deb -y
 echo "and now open https://remotedesktop.google.com/access"
@@ -44,8 +41,3 @@ sudo wget download.teamviewer.com/download/linux/teamviewer_amd64.deb -P /tmp
 sudo apt install /tmp/teamviewer_amd64.deb -y
 sudo teamviewer passwd pas123
 sudo teamviewer info
-
-sudo teamviewer license accept
-sudo chmod 777 /opt/teamviewer/config/global.conf
-sudo teamviewer daemon restart
-sudo teamviewer setup
