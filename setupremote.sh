@@ -11,7 +11,7 @@ echo "7. Ngrok v3 stable"
 echo "8. Fix apt update error/dpkg lock"
 echo "9. Unistal"
 echo "0. Quit"
-read "choose [1-6]:" num  
+read "choose [0-9]:" num  
 case $num in  
     Yes|yes|y|Y)  
         echo "That's amazing."  
