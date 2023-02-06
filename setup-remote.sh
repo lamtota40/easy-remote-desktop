@@ -26,9 +26,10 @@ esac
 sudo apt-get install openssh-server -y
 sudo systemctl enable ssh --now
 sudo systemctl start ssh
-sudo systemctl status ssh
 
 sudo apt install xrdp -y
+sudo systemctl enable xrdp.service
+sudo systemctl start xrdp.service
 sudo usermod -a -G ssl-cert xrdp
 
 sudo wget dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb -P /tmp
