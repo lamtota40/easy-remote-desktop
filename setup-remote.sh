@@ -1,6 +1,7 @@
 #!/bin/bash  
-  
-echo "Choose menu answer with number!"  
+echo "================================"  
+echo "Choose menu answer with number !"  
+echo "================================"
 echo "1. SSH server(Port 22)"
 echo "2. VNC server (Port 5901)"
 echo "3. XRDP server (Port 3389)"
@@ -10,9 +11,8 @@ echo "6. No Machine (Port 4000)"
 echo "7. Ngrok v3"
 echo "8. Firewall setup"
 echo "9. Fix apt update error/dpkg lock"
-echo "10. Unistal"
 echo "0. Quit"
-read "choose [0-10]:" num  
+read -p "choose [0-10]:" num  
 case $num in  
     "1")  
         echo "That's amazing."
