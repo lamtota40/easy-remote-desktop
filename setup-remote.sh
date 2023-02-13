@@ -1,7 +1,8 @@
 #!/bin/bash  
-echo "================================"  
-echo "Choose menu answer with number !"  
-echo "================================"
+echo "==================================="  
+echo " Author: github.com/lamtota40
+echo " Choose menu answer with number !"  
+echo "==================================="
 echo "1. SSH server(Port 22)"
 echo "2. VNC server (Port 5901)"
 echo "3. XRDP server (Port 3389)"
@@ -51,3 +52,20 @@ sudo wget download.teamviewer.com/download/linux/teamviewer_amd64.deb -P /tmp
 sudo apt install /tmp/teamviewer_amd64.deb -y
 sudo teamviewer passwd pas12345
 sudo teamviewer info | grep "TeamViewer ID"
+
+sudo apt install tigervnc-standalone-server -y
+vncserver
+##pass
+##pass
+#n
+
+vncserver -kill :1
+nano ~/.vnc/xstartup
+####
+
+chmod +x ~/.vnc/xstartup
+vncserver -localhost no :1
+sudo nano /etc/systemd/system/vncserver@.service
+####
+sudo systemctl enable vncserver@1.service
+
