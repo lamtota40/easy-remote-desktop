@@ -48,5 +48,5 @@ sudo apt install /tmp/nomachine.deb -y
 
 sudo wget download.teamviewer.com/download/linux/teamviewer_amd64.deb -P /tmp
 sudo apt install /tmp/teamviewer_amd64.deb -y
-sudo teamviewer passwd pas123
-sudo teamviewer info
+sudo teamviewer passwd pas12345
+sudo teamviewer info | grep "TeamViewer ID"
