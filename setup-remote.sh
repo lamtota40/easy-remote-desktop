@@ -36,6 +36,7 @@ sudo apt install xrdp -y
 sudo systemctl enable xrdp.service
 sudo systemctl start xrdp.service
 sudo usermod -a -G ssl-cert xrdp
+adduser xrdp ssl-cert
 
 sudo wget dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb -P /tmp
 sudo apt install /tmp/chrome-remote-desktop_current_amd64.deb -y
