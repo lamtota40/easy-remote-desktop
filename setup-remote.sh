@@ -12,7 +12,12 @@ echo "7. Ngrok v3"
 echo "8. Firewall setup"
 echo "9. Fix apt update error/dpkg lock"
 echo "0. Quit"
-read -p "choose [0-10]:" num  
+read -p "choose [0-10]:" num
+     until [[ -z "$num" || "$num" =~ ^[0-9]$ ]]; do
+	echo "$num: invalid selection."
+	read -p "choose [0-10]: " num
+     done
+
 case $num in  
     "1")  
         echo "That's amazing."
