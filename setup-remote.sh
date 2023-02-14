@@ -21,17 +21,15 @@ read -p "choose [0-9]:" num
 
 case $num in  
     "1")  
-        echo "That's amazing."
+        sudo apt-get install openssh-server -y
+sudo systemctl enable ssh --now
+sudo systemctl restart ssh
+
         ;;  
     "2")  
         echo "It's easy. Let's start learning from javatpoint."  
         ;;  
 esac
-
-
-sudo apt-get install openssh-server -y
-sudo systemctl enable ssh --now
-sudo systemctl restart ssh
 
 sudo apt install xrdp -y
 adduser xrdp ssl-cert
