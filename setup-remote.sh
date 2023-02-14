@@ -45,6 +45,7 @@ sudo wget -O nomachine32.deb https://www.nomachine.com/free/linux/32/deb
 sudo wget -O nomachine64.deb https://www.nomachine.com/free/linux/64/deb
 sudo apt install -f /tmp/nomachine.deb
 
+sudo wget download.teamviewer.com/download/linux/teamviewer_i386.deb -P /tmp
 sudo wget download.teamviewer.com/download/linux/teamviewer_amd64.deb -P /tmp
 sudo apt install /tmp/teamviewer_amd64.deb -y
 sudo teamviewer passwd pas12345
