@@ -51,6 +51,7 @@ sudo apt install /tmp/teamviewer_amd64.deb -y
 sudo teamviewer passwd pas12345
 sudo teamviewer info | grep "TeamViewer ID"
 
+#sudo apt install tightvncserver -y
 sudo apt install tigervnc-standalone-server -y
 vncserver
 ##pass
