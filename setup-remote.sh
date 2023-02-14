@@ -31,7 +31,7 @@ esac
 
 sudo apt-get install openssh-server -y
 sudo systemctl enable ssh --now
-sudo systemctl start ssh
+sudo systemctl restart ssh
 
 sudo apt install xrdp -y
 adduser xrdp ssl-cert
