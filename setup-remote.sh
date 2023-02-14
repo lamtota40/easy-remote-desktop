@@ -41,7 +41,8 @@ sudo wget dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb -P 
 sudo apt install /tmp/chrome-remote-desktop_current_amd64.deb -y
 echo "and now open https://remotedesktop.google.com/access"
 
-sudo wget https://www.nomachine.com/free/linux/64/deb -O nomachine.deb -P /tmp
+sudo wget -O nomachine32.deb https://www.nomachine.com/free/linux/32/deb
+sudo wget -O nomachine64.deb https://www.nomachine.com/free/linux/64/deb
 sudo apt install -f /tmp/nomachine.deb
 
 sudo wget download.teamviewer.com/download/linux/teamviewer_amd64.deb -P /tmp
