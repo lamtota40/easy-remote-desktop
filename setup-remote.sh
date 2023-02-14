@@ -31,7 +31,7 @@ case $num in
 	sudo systemctl restart xrdp
         ;;
     "0")  
-        exit
+        exit 1
         ;;
 esac
 
