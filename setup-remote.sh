@@ -22,18 +22,19 @@ read -p "choose [0-9]:" num
 case $num in  
     "1")  
         sudo apt-get install openssh-server -y
-sudo systemctl enable ssh --now
-sudo systemctl restart ssh
-
+	sudo systemctl enable ssh --now
+	sudo systemctl restart ssh
         ;;  
     "2")  
-        echo "It's easy. Let's start learning from javatpoint."  
-        ;;  
+        sudo apt install xrdp -y
+	adduser xrdp ssl-cert
+	sudo systemctl restart xrdp
+        ;;
+    "0")  
+        exit
+        ;;
 esac
 
-sudo apt install xrdp -y
-adduser xrdp ssl-cert
-sudo systemctl restart xrdp
 
 sudo wget dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb -P /tmp
 sudo apt install /tmp/chrome-remote-desktop_current_amd64.deb -y
