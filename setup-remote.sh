@@ -1,7 +1,7 @@
 #!/bin/bash  
 echo "==================================="  
 echo " Author: github.com/lamtota40
-echo " Choose menu answer with number !"  
+echo " Remote your Computer"  
 echo "==================================="
 echo "1. SSH server(Port 22)"
 echo "2. Dropbear-SSH server(Port 23)"
