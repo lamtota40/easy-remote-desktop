@@ -4,6 +4,7 @@ echo " Author: github.com/lamtota40
 echo " Choose menu answer with number !"  
 echo "==================================="
 echo "1. SSH server(Port 22)"
+echo "2. Dropbear-SSH server(Port 23)"
 echo "2. VNC server (Port 5901)"
 echo "3. XRDP server (Port 3389)"
 echo "4. Chrome Remote Desktop only 64bit (STUN)"
