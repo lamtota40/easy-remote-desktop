@@ -25,33 +25,12 @@ case $num in
         sudo apt-get install openssh-server -y
 	sudo systemctl enable ssh --now
 	sudo systemctl restart ssh
-        ;;  
-    "4")  
-        sudo apt install xrdp -y
-	adduser xrdp ssl-cert
-	sudo systemctl restart xrdp
         ;;
-    "0")  
-        exit 1
+    "2")  
+        exit 0
         ;;
-esac
-
-
-sudo wget dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb -P /tmp
-sudo apt install /tmp/chrome-remote-desktop_current_amd64.deb -y
-echo "and now open https://remotedesktop.google.com/access"
-
-sudo wget -O nomachine32.deb https://www.nomachine.com/free/linux/32/deb
-sudo wget -O nomachine64.deb https://www.nomachine.com/free/linux/64/deb
-sudo apt install -f /tmp/nomachine.deb
-
-sudo wget download.teamviewer.com/download/linux/teamviewer_i386.deb -P /tmp
-sudo wget download.teamviewer.com/download/linux/teamviewer_amd64.deb -P /tmp
-sudo apt install /tmp/teamviewer_amd64.deb -y
-sudo teamviewer passwd pas12345
-sudo teamviewer info | grep "TeamViewer ID"
-
-#sudo apt install tightvncserver -y
+    "3")  
+        #sudo apt install tightvncserver -y
 sudo apt install tigervnc-standalone-server -y
 vncserver
 ##pass
@@ -67,4 +46,36 @@ vncserver -localhost no :1
 sudo nano /etc/systemd/system/vncserver@.service
 ####
 sudo systemctl enable vncserver@1.service
-
+        ;;
+    "4")  
+        sudo apt install xrdp -y
+	adduser xrdp ssl-cert
+	sudo systemctl restart xrdp
+        ;;
+    "5")  
+        sudo wget dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb -P /tmp
+        sudo apt install /tmp/chrome-remote-desktop_current_amd64.deb -y
+        echo "and now open https://remotedesktop.google.com/access"
+        ;;
+    "6")  
+        sudo wget download.teamviewer.com/download/linux/teamviewer_i386.deb -P /tmp
+        sudo wget download.teamviewer.com/download/linux/teamviewer_amd64.deb -P /tmp
+        sudo apt install /tmp/teamviewer_amd64.deb -y
+        sudo teamviewer passwd pas12345
+        sudo teamviewer info | grep "TeamViewer ID"
+        ;;
+    "7")  
+        sudo wget -O nomachine32.deb https://www.nomachine.com/free/linux/32/deb
+        sudo wget -O nomachine64.deb https://www.nomachine.com/free/linux/64/deb
+        sudo apt install -f /tmp/nomachine.deb
+        ;;
+    "8")  
+        exit 0
+        ;;
+    "9")  
+        exit 0
+        ;;
+    "0")  
+        exit 0
+        ;;
+esac
