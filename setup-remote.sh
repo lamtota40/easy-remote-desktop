@@ -5,14 +5,13 @@ echo " Choose menu answer with number !"
 echo "==================================="
 echo "1. SSH server(Port 22)"
 echo "2. Dropbear-SSH server(Port 23)"
-echo "2. VNC server (Port 5901)"
-echo "3. XRDP server (Port 3389)"
-echo "4. Chrome Remote Desktop only 64bit (STUN)"
-echo "5. TeamViewer (Port 5938)"
-echo "6. No Machine (Port 4000)"
-echo "7. Ngrok v3"
-echo "8. Firewall setup"
-echo "9. Fix apt update error/dpkg lock"
+echo "3. VNC server (Port 5901)"
+echo "4. XRDP server (Port 3389)"
+echo "5. Chrome Remote Desktop only 64bit (STUN)"
+echo "6. TeamViewer (Port 5938)"
+echo "7. No Machine (Port 4000)"
+echo "8. Ngrok v3"
+echo "9. Firewall setup"
 echo "0. Quit"
 echo "==================================="
 read -p "choose [0-9]:" num
@@ -27,7 +26,7 @@ case $num in
 	sudo systemctl enable ssh --now
 	sudo systemctl restart ssh
         ;;  
-    "2")  
+    "4")  
         sudo apt install xrdp -y
 	adduser xrdp ssl-cert
 	sudo systemctl restart xrdp
