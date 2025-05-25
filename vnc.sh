@@ -19,7 +19,7 @@ HOME_DIR="$(eval echo ~$active_user)"
 sudo apt install -y tigervnc-standalone-server
 
 # Buat direktori .vnc jika belum ada dan file xstartup
-mkdir -p "$HOME_DIR/.vnc"
+sudo mkdir -p "$HOME_DIR/.vnc"
 
 cat <<EOF > ~/.vnc/xstartup
 #!/bin/bash
